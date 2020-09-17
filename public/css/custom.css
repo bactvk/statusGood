@@ -1,0 +1,57 @@
+.content_css{
+	font-size: 25px;
+    color: gold;
+}
+.name_style{
+	color: yellow;
+  	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  	font-size: 50px;
+}
+
+.music_block{
+	position: fixed;
+    top: 10;
+    right: 20px;
+}
+
+.gif_icon{
+	padding: 5px 15px;
+}
+.gif_icon img{
+	width: 80px;
+}
+.music_block{
+	display: flex;
+	background: #5d7e7f4d;
+    padding: 10px
+}
+.play_pause{
+	width: 140px;
+}
+.btn_play_pause{
+	float: right;
+	cursor: pointer;
+}
+.music_block{
+	display: none;
+}
+.snow{
+	position: fixed;
+	top: 20;
+	left: 10;
+}
+
+.add_cap{
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+
+	width: 90px;
+    background: yellow;
+    border-radius: 50%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}

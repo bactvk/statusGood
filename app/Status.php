@@ -10,7 +10,9 @@ class Status extends Model
 
     static public function findStatusByName($name)
     {
-    	$result = self::where('name','like','%'.$name.'%')->first();
+    	$C_name = ucfirst($name);
+    	
+    	$result = self::where('name','LIKE BINARY','%'.$C_name.'%')->first();
 
     	return $result;
     }

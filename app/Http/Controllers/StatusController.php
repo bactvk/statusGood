@@ -9,16 +9,23 @@ class StatusController extends Controller
 {
     public function home(Request $request)
     {
-    	if($request->isMethod("POST")){
-    		$name = $request->key_search;
+        
+        $data = [
+            'result' => '',
+            'name' => ''
+        ];
 
-    		$content = Status::findStatusByName($name);
-    		dd($content);
+    	if($request->isMethod("POST")){
+            $data = [
+                'name' => $request->key_search
+            ];
+
+    		$content = Status::findStatusByName($data['name']);
     		if(!empty($content)){
-    			$result = $content->content;
-    			return redirect()->route('status-home')->with('result',$result);
+    			$data['result'] = $content->content;
+                
     		}
     	}
-    	return view('frontend.status.index');
+    	return view('frontend.status.index',$data);
     }
 }
