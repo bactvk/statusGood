@@ -28,4 +28,17 @@ class StatusController extends Controller
     	}
     	return view('frontend.status.index',$data);
     }
+
+    public function add(Request $request)
+    {
+        if($request->isMethod('post')){
+            $inputs = [
+                'name' => ucfirst($request->name),
+                'content' => $request->content
+            ];
+            Status::new($inputs);
+            return redirect()->route('status-home')->with('success','Adding success');
+        }
+        return view('frontend.status.add');
+    }
 }

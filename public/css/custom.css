@@ -55,3 +55,9 @@
     align-items: center;
     padding: 12px;
 }
+
+.success_msg{
+	position: fixed;
+	top: 20px;
+	left: 30px;
+}

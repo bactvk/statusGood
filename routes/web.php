@@ -12,3 +12,5 @@
 */
 
 Route::match(['get','post'],'/', 'StatusController@home')->name('status-home'); 
+
+Route::match(['get','post'],'/status/add','StatusController@add')->name('status-add');

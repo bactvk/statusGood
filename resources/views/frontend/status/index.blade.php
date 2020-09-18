@@ -3,7 +3,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="colorlib.com">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
     <link href="assets/css/main.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/custom.css">
@@ -51,9 +51,14 @@
       </form>
 
       <div class="add_cap">
-        <a href="">Adding caption</a>
+        <a href="{{route('status-add')}}">Adding caption</a>
       </div>
 
+      @if(session('success'))
+        <div class="alert alert-success success_msg">
+            {{session('success')}}
+        </div>
+      @endif
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

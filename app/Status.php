@@ -16,4 +16,9 @@ class Status extends Model
 
     	return $result;
     }
+
+    static public function new($data)
+    {
+    	return self::insert($data);
+    }
 }
